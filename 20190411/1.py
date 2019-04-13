@@ -27,17 +27,14 @@ def ev_space(t):
     t.forward(10)
 
 def ev_d(t):
-    global a
-    if a==1:
+    if t.isdown():
         print("擡起畫筆")
-        a=0
-        print("a=",a)
         t.penup() # 擡起畫筆 
-    elif a==0:
-        a=1
+        return
+    else:
         print("放下畫筆")
-        print("a=",a)
         t.pendown()
+        return
 
 def ev_start(t):
     print("開始繪製ICON")
@@ -63,7 +60,7 @@ def mymain():
     mydown = lambda :ev_down(t) 
     myspace=lambda :ev_space(t)
     myd=lambda :ev_d(t)
-    t.pendown()
+    t.penup() # 擡起畫筆 
     
     ev_s=partial(ev_start,t)
     ev_e=partial(ev_end,t,s)
