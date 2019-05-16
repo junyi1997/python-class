@@ -1,0 +1,26 @@
+1.到要上傳的資料夾裡面
+2.輸入
+git config --global user.name '名稱'
+git config --global user.email '***@gmail.com'
+透過 git config -l 查看名稱與mail是否正確
+3.製作GitHub項目
+  git init
+  git remote add origin https://github.com/junyi1997/Python_class_Final_project.git
+查看底下目錄
+  git status
+
+上傳步驟(之後從這裡開始執行即可)
+git add .
+git commit -m 'debug'
+git push -u origin master
+
+下載
+第一次下載(ex:我的存放位置)
+D:
+cd D:\105103308\GitHub\Python_class_final_project
+git clone https://github.com/junyi1997/Python_class_Final_project.git
+之後會看到桌面有一個名為Python_class_Final_project的資料夾
+
+點開Python_class_Final_project已經有.git 資料夾的
+cd D:\105103308\GitHub\Python_class_final_project
+git pull --rebase
