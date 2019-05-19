@@ -17,10 +17,10 @@ for each in data:
     if "&lis" in url:
         #print("抓到的網址：",url,"\n")
         a.add(url)
-print(a)
+#print(a)
 b=list(a)
 i=len(a)
-print("i",i)
+#print("i",i)
 
 for j in range(1,i):
     print(b[j])
